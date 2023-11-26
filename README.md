@@ -15,6 +15,7 @@ However, when adapting such a model to a specific task or dataset, only a few fe
 The technique constrains the rank of the update matrix ΔW using its rank decomposition. It represents ΔWₙₖ as the product of 2 low-rank matrices Bₙᵣ and Aᵣₖ where r << min(n, k). 
 This implies that the forward pass of the layer, originally Wx, is modified to Wx + BAx (as shown in the figure below). A random Gaussian initialization is used for A and B is initially to 0, 
 so BA=0 at the start of training. The update BA is additionally scaled with a factor α/r.
+
 ![64649977d084d2b4b66c6492_1_e5pYWjrZR3eA_YbCKu8deQ](https://github.com/nitin649/Fine_tuning_using_LORA/assets/55678844/a9f8db6f-39c4-4cc0-ba69-66da6d3bcbd0)
 
 
