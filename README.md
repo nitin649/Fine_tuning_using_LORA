@@ -16,6 +16,13 @@ The technique constrains the rank of the update matrix ΔW using its rank decomp
 This implies that the forward pass of the layer, originally Wx, is modified to Wx + BAx (as shown in the figure below). A random Gaussian initialization is used for A and B is initially to 0, 
 so BA=0 at the start of training. The update BA is additionally scaled with a factor α/r.
 
+<p align="center">
+  ![64649977d084d2b4b66c6492_1_e5pYWjrZR3eA_YbCKu8deQ](https://github.com/nitin649/Fine_tuning_using_LORA/assets/55678844/64727807-9aa1-467a-b8dd-2aa8cb5379d8)
+</p>
+
+
+
+
 
 # Benefits of using Lora
 1. Reduction of training time and space: Using the technique shown above, r(n + k) parameters have to be tuned during model adaption. Since r << min(n, k), this is much lesser than the number of parameters
